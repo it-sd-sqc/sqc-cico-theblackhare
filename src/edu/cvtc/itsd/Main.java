@@ -41,8 +41,12 @@ public class Main {
     public void insertString(FilterBypass fb, int offset, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
-        super.insertString(fb, offset, stringToAdd, attr);
+      // Only allow integers in the input
+      // "[0-9]" controls whitespace like a trim and also doesnt allow negative numbers/special characters.
+      if (stringToAdd.matches("[0-9]*")) {
+        if (fb.getDocument() != null) {
+          super.insertString(fb, offset, stringToAdd, attr);
+        }
       }
       else {
         Toolkit.getDefaultToolkit().beep();
@@ -53,8 +57,11 @@ public class Main {
     public void replace(FilterBypass fb, int offset, int lengthToDelete, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
-        super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
+      // "[0-9]" controls whitespace like a trim and also doesnt allow negative numbers/special characters.
+      if (stringToAdd.matches("[0-9]*")) {
+        if (fb.getDocument() != null) {
+          super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
+        }
       }
       else {
         Toolkit.getDefaultToolkit().beep();
