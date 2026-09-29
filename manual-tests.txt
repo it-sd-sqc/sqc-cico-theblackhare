@@ -68,6 +68,14 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 2. Enter abcd into the field and click Update.
 
 ## Expected results
-*The field should ignore non-numerical input.
+* The field should ignore non-numerical input.
 
+# Module 5: Ticket 501 - Button to skip timeout
 
+## Test steps
+1. Build and run CiCo
+2. Scan card or Enter ID number
+3. On clock in/out screen click button.
+
+## Expected results
+* Program should return to main screen upon click event.
