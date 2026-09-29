@@ -296,6 +296,13 @@ public class Main {
     labelState.setForeground(Color.magenta);
     panelStatus.add(labelState);
 
+    // Add a button to acknowledge the status and return to the main panel.
+    // This is a new feature for Module 5 Ticket - 501.
+    JButton buttonAcknowledgeStatus = new JButton("Done");
+    buttonAcknowledgeStatus.addActionListener(handler);
+    buttonAcknowledgeStatus.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    panelStatus.add(buttonAcknowledgeStatus);
+    
     panelStatus.add(Box.createVerticalGlue());
 
     // Error panel ////////////////////////////////////////////////////////////
