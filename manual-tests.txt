@@ -74,7 +74,7 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 
 ## Test steps
 1. Build and run CiCo
-2. Scan card or Enter ID number
+2. Scan card or Enter ID number 00000000
 3. On clock in/out screen click button.
 
 ## Expected results
